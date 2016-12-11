@@ -1,5 +1,3 @@
-
-
 var context = document.getElementById('canvas').getContext('2d'),
     startButton = document.getElementById('startButton'),
     glasspane = document.getElementById('glasspane'),
