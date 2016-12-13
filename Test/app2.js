@@ -4,32 +4,31 @@ var context = document.getElementById('canvas').getContext('2d'),
     startButton = document.getElementById('startButton'),
     glasspane = document.getElementById('glasspane'),
     paused = true,
-    circles_target = [],
+    circles_target = [];
     circles_ennemies = [];
 
 
 context.lineWidth = 0.5;
 context.font = '32pt Ariel';
 
-for (var i=0; i < 5; ++i) {
+for (var i=0; i < 30; ++i) {
    circles_target[i] = {
        x: 100,
        y: 100,
-       velocityX: 8*Math.random(),
+       velocityX: 7*Math.random(),
        velocityY: 6*Math.random(),
-       radius: 15,
-       color: 'rgba(0, 255, 255, 0.9)'};
+       radius: 50*Math.random(),
+       color: 'rgba(255, 0, 0, 1)'};
 }
 
-for (var i=0; i < 50; ++i) {
+for (var i=0; i < 5; ++i) {
    circles_ennemies[i] = {
        x: 100,
        y: 100,
-       velocityX: 10*Math.random(),
-       velocityY: 10*Math.random(),
-       radius: 50*Math.random(),
-       color: 'rgba(255, 0, 0, 1)'
-        };
+       velocityX: 4*Math.random(),
+       velocityY: 4*Math.random(),
+       radius: 10,
+       color: ' rgba(0, 255, 255, 0.9)' };
 }
 
 startButton.onclick = function(e) {
@@ -56,7 +55,7 @@ setInterval(function() {
 
       circles_target.forEach(function(circle) {
          context.beginPath();
-         context.arc(circle.x, circle.y, circle.radius, 0, Math.PI*3, false);
+         context.arc(circle.x, circle.y, circle.radius, 0, Math.PI*2, false);
          context.fillStyle = circle.color;
          context.fill();
          adjustPosition(circle);
