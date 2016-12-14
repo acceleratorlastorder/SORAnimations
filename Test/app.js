@@ -83,6 +83,30 @@ else {
 */
 context.font = FONT_HEIGHT + 'px Arial';
 
+
+
+function start() {
+    timer();
+}
+let i=0;
+
+function timer(){
+  let result = "fini";
+  i++;
+  if (i >=5) {
+    console.log(i);
+    i =0;
+    return result;
+  }
+  else {
+    console.log(i);
+
+    setTimeout(timer,1000);
+  }
+}
+
+
+/*
 i=0;
 function partA() {
   setTimeout(timer,1000);
@@ -92,9 +116,6 @@ function partB() {
   console.log(i);
 }
 
-function start() {
-    partA();
-}
 function timer(){
 result = "fini"
 do {
@@ -111,10 +132,4 @@ i++;
 }
 
 }
-/*
-
-function start()
-{
-   alert("let's start");
-   return true;
-}*/
+*/
