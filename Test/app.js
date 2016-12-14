@@ -83,17 +83,33 @@ else {
 */
 context.font = FONT_HEIGHT + 'px Arial';
 
+i=0;
+function partA() {
+  setTimeout(timer,1000);
+}
+
+function partB() {
+  console.log(i);
+}
+
 function start() {
-    result = "fini"
-    for (let i = 0; i < 30; i++) {
-        if (i == 30) {
-            console.log(i);
-            return result;
-        } else {
-            loop = setInterval(drawClock, 1000);
-            console.log(i);
-        }
+    partA();
+}
+function timer(){
+result = "fini"
+do {
+partA();
+} while (i < 30) {
+    if (i >= 30) {
+        console.log(i);
+        return result;
+    } else {
+console.log(i);
+i++;
     }
+
+}
+
 }
 /*
 
