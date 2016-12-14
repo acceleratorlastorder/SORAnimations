@@ -69,6 +69,7 @@ setInterval(function() {
          context.fill();
          adjustPosition(circle);
       });
+      score();
    }
 }, 1500 / 60);
 
@@ -84,8 +85,13 @@ function adjustPosition(circle) {
    circle.x += circle.velocityX;
    circle.y += circle.velocityY;
 }
-
-function drawGrid(context, color, stepx, stepy) {
+function score() {
+  var element = document.getElementById('score');
+  var score = element.innerText;
+  console.log(score);
+  element.innerText = parseInt(score)+1;
+}
+/*function drawGrid(context, color, stepx, stepy) {
    context.strokeStyle = color;
    context.lineWidth = 0.5;
 
@@ -102,4 +108,4 @@ function drawGrid(context, color, stepx, stepy) {
       context.lineTo(context.canvas.width, i);
       context.stroke();
    }
-}
+}*/
