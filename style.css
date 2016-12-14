@@ -24,7 +24,7 @@ body {
 #canvas {
     background: #ffffff;
     border: thin solid #aaaaaa;
-    cursor: url(images/cible.png), pointer;
+    cursor: url(images/cible.png) 16 16, pointer;
     border-radius: 6px;
 }
 
