@@ -91,13 +91,11 @@ function drawHands() {
 
 function drawClock() {
    context.clearRect(0,0,canvas.width,canvas.height);
-
+
    drawCircle();
    drawCenter();
    drawHands();
    drawNumerals();
 }
-
-
 context.font = FONT_HEIGHT + 'px Arial';
 loop = setInterval(drawClock, 1000);
