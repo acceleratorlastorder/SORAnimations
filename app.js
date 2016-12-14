@@ -50,7 +50,7 @@ context.canvas.onmousedown = function(e) {
 setInterval(function() {
    if (!paused) {
       context.clearRect(0, 0, context.canvas.width, context.canvas.height);
-      
+
       circles_target.forEach(function(circle) {
          context.beginPath();
          context.arc(circle.x, circle.y, circle.radius, 0, Math.PI*3, false);

@@ -1,74 +1,26 @@
-
 <!DOCTYPE html>
 <html>
-   <head>
-      <title>Kill The Balls</title>
 
-      <style>
-         body {
-            background: #dddddd;
-         }
+<head>
+    <title>Kill The Balls</title>
+    <link rel="stylesheet" href="style.css">
+</head>
 
-         #canvas {
-            margin: 0 auto;
-            background: #ffffff;
-            border: thin solid #aaaaaa;
-            cursor: url(cible.png), pointer;
-         }
+<body>
+    <h1 class='title'>Kill the Balls</h1>
 
-         #glasspane {
-            position: absolute;
-            left: 50px;
-            top: 50px;
-            padding: 0px 20px 10px 10px;
-            background: rgba(0, 0, 0, 0.3);
-            border: thin solid rgba(0, 0, 0, 0.6);
-            color: #eeeeee;
-            font-family: Droid Sans, Arial, Helvetica, sans-serif;
-            font-size: 12px;
-            cursor: pointer;
-            box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
-         }
+    <div id='glasspane'>
+        <p>Kill the blue balls</p>
+        <a id='startButton'>Start</a>
+    </div>
 
-         #glasspane h2 {
-            font-weight: normal;
-         }
+    <div class="wrapper">
+        <canvas id='canvas' width='1050' height='720'>
+          Canvas not supported
+        </canvas>
+    </div>
 
-         #glasspane .title {
-            font-size: 2em;
-            color: rgba(255, 255, 0, 0.8);
-         }
+    <script src='app2.js'></script>
+</body>
 
-         #glasspane a:hover {
-            color: yellow;
-         }
-
-         #glasspane a {
-            text-decoration: none;
-            color: #cccccc;
-            font-size: 3.5em;
-         }
-
-         #glasspane p {
-            margin: 10px;
-            color: rgba(65, 65, 220, 1.0);
-            font-size: 12pt;
-            font-family: Palatino, Arial, Helvetica, sans-serif;
-         }
-      </style>
-   </head>
-
-   <body>
-      <div id='glasspane'>
-         <h2 class='title'>Kill the Balls</h2>
-
-         <p>Kill the blue balls</p>
-
-         <a id='startButton'>Start</a>
-      </div>
-
-      <canvas id='canvas' width='1300' height='720'>
-         Canvas not supported
-      </canvas>
-
-     <script src='app2.js'></script>
+</html>
