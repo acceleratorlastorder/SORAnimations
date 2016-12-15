@@ -1,3 +1,8 @@
+var elem = document.getElementById('myCanvas'),
+    elemLeft = elem.offsetLeft,
+    elemTop = elem.offsetTop,
+    context = elem.getContext('2d'),
+    elements = [];
 
 // Add event listener for `click` events.
 elem.addEventListener('click', function(event) {
@@ -11,6 +16,16 @@ elem.addEventListener('click', function(event) {
     });
 
 }, false);
+
+// Add element.
+elements.push({
+    colour: '#05EFFF',
+    width: 150,
+    height: 100,
+    top: 20,
+    left: 15
+});
+
 // Render elements.
 elements.forEach(function(element) {
     context.fillStyle = element.colour;
