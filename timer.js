@@ -10,6 +10,10 @@ var canvas = document.getElementById('timercanvas'),
 
 // Functions.....................................................
 
+function start() {
+    timer(), loop = setInterval(drawClock, 500);
+}
+
 function drawCircle() {
     context.beginPath();
     context.arc(canvas.width / 2, canvas.height / 2,
@@ -49,7 +53,7 @@ function drawHand(loc, isHour) {
 }
 
 function drawHands() {
-    sec = i;
+    sec = time;
     sec = sec > timeDifficulty ? sec - timeDifficulty : sec;
     drawHand(sec, false, 4);
 }
@@ -63,10 +67,6 @@ function drawClock() {
 }
 
 context.font = FONT_HEIGHT + 'px Arial';
-
-function start() {
-    timer(), loop = setInterval(drawClock, 500);
-}
 
 difficulty = 1;
 switch (difficulty) {
@@ -83,17 +83,17 @@ switch (difficulty) {
         timeDifficulty = 666;
         console.log("pourquoi tu exécute ce bloc");
 }
-let i = 0;
+let time = 0;
 let result = "fini";
 
 function timer() {
-    i++;
-    if (i >= timeDifficulty) {
-        console.log(i);
-        i = 0;
+    time++;
+    if (time >= timeDifficulty) {
+        console.log(time);
+        time = 0;
         return console.log(result), result;
     } else {
-        console.log(i);
+        console.log(time);
         setTimeout(timer, 1000);
     }
 
