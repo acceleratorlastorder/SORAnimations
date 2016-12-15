@@ -8,7 +8,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 5%;
+    margin-top: 0.5%;
 }
 
 .title {
@@ -31,6 +31,7 @@ body {
     border: thin solid #aaaaaa;
     cursor: url(images/cible.png) 16 16, pointer;
     border-radius: 6px;
+    margin-bottom: 10px;
 }
 
 #timer {}
@@ -67,6 +68,7 @@ body {
     #canvas {
         width: 99vw;
         height: 75vh;
+        margin-bottom: 0px;
     }
     .wrapper {
         margin: 0;
