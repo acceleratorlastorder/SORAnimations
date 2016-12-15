@@ -1,5 +1,3 @@
-
-
 var board = document.getElementById('canvas'),
     startButton = document.getElementById('startButton'),
     glasspane = document.getElementById('glasspane'),
@@ -19,8 +17,6 @@ context.font = '32pt Ariel';
 elements.push({
 circles_target
 });
-
-
 
 // Add event listener for `click` events.
 elem.addEventListener('click', function(event) {
