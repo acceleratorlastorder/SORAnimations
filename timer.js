@@ -1,11 +1,11 @@
-var canvas = document.getElementById('timercanvas'),
-    context = canvas.getContext('2d'),
+let timercanvas = document.getElementById('timer'),
+    contexttimer = timercanvas.getContext('2d'),
     FONT_HEIGHT = 10,
     MARGIN = 35,
-    HAND_TRUNCATION = canvas.width / 25,
-    HOUR_HAND_TRUNCATION = canvas.width / 10,
+    HAND_TRUNCATION = timercanvas.width / 25,
+    HOUR_HAND_TRUNCATION = timercanvas.width / 10,
     NUMERAL_SPACING = 20,
-    RADIUS = canvas.width / 2 - MARGIN,
+    RADIUS = timercanvas.width / 2 - MARGIN,
     HAND_RADIUS = RADIUS + NUMERAL_SPACING;
 
 // Functions.....................................................
@@ -15,41 +15,41 @@ function start() {
 }
 
 function drawCircle() {
-    context.beginPath();
-    context.arc(canvas.width / 2, canvas.height / 2,
+    contexttimer.beginPath();
+    contexttimer.arc(timercanvas.width / 2, timercanvas.height / 2,
         RADIUS, 0, Math.PI * 2, true);
-    context.stroke();
+    contexttimer.stroke();
 }
 
 function drawNumerals() {
-    var numerals = [15, 30, 45, 60],
+    let numerals = [15, 30, 45, 60],
         angle = 0,
         numeralWidth = 0;
 
     numerals.forEach(function(numeral) {
         angle = Math.PI / 6 * (numeral - 3);
-        numeralWidth = context.measureText(numeral).width;
-        context.fillText(numeral,
-            canvas.width / 2 + Math.cos(angle) * (HAND_RADIUS) - numeralWidth / 2,
-            canvas.height / 2 + Math.sin(angle) * (HAND_RADIUS) + FONT_HEIGHT / 3);
+        numeralWidth = contexttimer.measureText(numeral).width;
+        contexttimer.fillText(numeral,
+            timercanvas.width / 2 + Math.cos(angle) * (HAND_RADIUS) - numeralWidth / 2,
+            timercanvas.height / 2 + Math.sin(angle) * (HAND_RADIUS) + FONT_HEIGHT / 3);
     });
 }
 
 function drawCenter() {
-    context.beginPath();
-    context.arc(canvas.width / 2, canvas.height / 2, 5, 0, Math.PI * 2, true);
-    context.fill();
+    contexttimer.beginPath();
+    contexttimer.arc(timercanvas.width / 2, timer.height / 2, 5, 0, Math.PI * 2, true);
+    contexttimer.fill();
 }
 
 function drawHand(loc, isHour) {
-    var angle = (Math.PI * 2) * (loc / 60) - Math.PI / 2,
+    let angle = (Math.PI * 2) * (loc / 60) - Math.PI / 2,
         handRadius = isHour ? RADIUS - HAND_TRUNCATION - HOUR_HAND_TRUNCATION :
         RADIUS - HAND_TRUNCATION;
 
-    context.moveTo(canvas.width / 2, canvas.height / 2);
-    context.lineTo(canvas.width / 2 + Math.cos(angle) * handRadius,
-        canvas.height / 2 + Math.sin(angle) * handRadius);
-    context.stroke();
+    contexttimer.moveTo(timercanvas.width / 2, timercanvas.height / 2);
+    contexttimer.lineTo(timercanvas.width / 2 + Math.cos(angle) * handRadius,
+        timercanvas.height / 2 + Math.sin(angle) * handRadius);
+    contexttimer.stroke();
 }
 
 function drawHands() {
@@ -59,14 +59,14 @@ function drawHands() {
 }
 
 function drawClock() {
-    context.clearRect(0, 0, canvas.width, canvas.height);
+    contexttimer.clearRect(0, 0, timercanvas.width, timercanvas.height);
     drawCircle();
     drawCenter();
     drawHands();
     drawNumerals();
 }
 
-context.font = FONT_HEIGHT + 'px Arial';
+contexttimer.font = FONT_HEIGHT + 'px Arial';
 
 difficulty = 1;
 switch (difficulty) {

@@ -8,23 +8,22 @@
 
 <body>
     <h1 class='title'>Kill the Balls</h1>
-
-    <div id='glasspane'>
-        <p>Kill the blue balls</p>
-        <a id='startButton'>Start</a>
+    <div class="container">
+        <div id='glasspane'>
+            <p>Kill the blue balls</p>
+            <a id='startButton'>Start</a>
+        </div>
+        <canvas id="timer" width="120" height="120">
+        Canvas not supported
+      </canvas>
     </div>
-
     <div class="wrapper">
-        <canvas id='canvas' width='1050' height='720'>
-          Canvas not supported
-        </canvas>
-        <canvas id='canvas' width='1050' height='720'>
+        <canvas id='canvas' width="1050" height="720">
           Canvas not supported
         </canvas>
     </div>
-
-    <script src='app.js'></script>
-    <script src='timer.js'></script>
+    <script src='app.js' charset="utf-8"></script>
+    <script src="timer.js" charset="utf-8"></script>
 </body>
 
 </html>
