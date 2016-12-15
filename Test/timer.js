@@ -18,12 +18,12 @@ function drawCircle() {
 }
 
 function drawNumerals() {
-    var numerals = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30],
+    var numerals = [15,30,45,60],
         angle = 0,
         numeralWidth = 0;
 
     numerals.forEach(function(numeral) {
-        angle = Math.PI / 15 * (numeral - 7.5);
+        angle = Math.PI / 6 * (numeral - 3);
         numeralWidth = context.measureText(numeral).width;
         context.fillText(numeral,
             canvas.width / 2 + Math.cos(angle) * (HAND_RADIUS) - numeralWidth / 2,
@@ -49,16 +49,13 @@ function drawHand(loc, isHour) {
 }
 
 function drawHands() {
-    var date = new Date,
         sec = i;
-    sec = sec > 30 ? sec - 30 : sec;
-    drawHand(sec * 7 + (1 * 2), false, 4);
+    sec = sec > timeDifficulty ? sec - timeDifficulty : sec;
+    drawHand(sec, false, 4);
 }
 
 function drawClock() {
     context.clearRect(0, 0, canvas.width, canvas.height);
-
-    console.log("i à cet instant vaux en dehors de la fonction timer:",i);
     drawCircle();
     drawCenter();
     drawHands();
