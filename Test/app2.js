@@ -1,27 +1,38 @@
 
 
-var context = document.getElementById('canvas').getContext('2d'),
+var board = document.getElementById('canvas'),
     startButton = document.getElementById('startButton'),
     glasspane = document.getElementById('glasspane'),
+    context = board.getContext('2d'),
     paused = true,
+    elem = board,
+    elemLeft = elem.offsetLeft,
+    elemTop = elem.offsetTop,
+    elements = [],
     circles_target = [],
     circles_ennemies = [];
-
 
 context.lineWidth = 0.5;
 context.font = '32pt Ariel';
 
-for (var i=0; i < 5; ++i) {
+// Add element.
+elements.push({
+circles_target
+});
+
+
+
+for (let i=0; i < 8; ++i) {
    circles_target[i] = {
        x: 100,
        y: 100,
        velocityX: 8*Math.random(),
        velocityY: 6*Math.random(),
-       radius: 15,
+       radius: 20,
        color: 'rgba(0, 255, 255, 0.9)'};
 }
 
-for (var i=0; i < 50; ++i) {
+for (let i=0; i < 50; ++i) {
    circles_ennemies[i] = {
        x: 100,
        y: 100,
@@ -89,14 +100,14 @@ function drawGrid(context, color, stepx, stepy) {
    context.strokeStyle = color;
    context.lineWidth = 0.5;
 
-   for (var i = stepx + 0.5; i < context.canvas.width; i += stepx) {
+   for (let i = stepx + 0.5; i < context.canvas.width; i += stepx) {
       context.beginPath();
       context.moveTo(i, 0);
       context.lineTo(i, context.canvas.height);
       context.stroke();
    }
 
-   for (var i = stepy + 0.5; i < context.canvas.height; i += stepy) {
+   for (let i = stepy + 0.5; i < context.canvas.height; i += stepy) {
       context.beginPath();
       context.moveTo(0, i);
       context.lineTo(context.canvas.width, i);
