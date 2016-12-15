@@ -65,42 +65,39 @@ function drawClock() {
     drawNumerals();
 }
 
-// Initialization................................................
-
-/*
-i=0;
-result = "fini"
-function timer(){
-i++
-if (i==30) {
-    console.log(i);
-  return result;
-}
-else {
-      console.log(i);
-}
-}
-*/
 context.font = FONT_HEIGHT + 'px Arial';
-
-
 
 function start() {
     timer();
     loop = setInterval(drawClock, 1000);
 }
+
+difficulty = 3;
+switch (difficulty) {
+  case 1:
+timeDifficulty = 60;
+    break;
+    case 2:
+timeDifficulty = 30;
+      break;
+      case 3:
+timeDifficulty = 10;
+        break;
+  default:
+
+}
 let i=0;
 let result = "fini";
 function timer(){
-
   i++;
-  if (i >=30) {
+  if (i >=timeDifficulty) {
     console.log(i);
     i =0;
-    return result;
+    return console.log(result), result;
   }
   else {
     console.log(i);
     setTimeout(timer,1000);
   }
+
 }
