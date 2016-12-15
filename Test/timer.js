@@ -18,7 +18,7 @@ function drawCircle() {
 }
 
 function drawNumerals() {
-    var numerals = [15,30,45,60],
+    var numerals = [15, 30, 45, 60],
         angle = 0,
         numeralWidth = 0;
 
@@ -44,12 +44,12 @@ function drawHand(loc, isHour) {
 
     context.moveTo(canvas.width / 2, canvas.height / 2);
     context.lineTo(canvas.width / 2 + Math.cos(angle) * handRadius,
-    canvas.height / 2 + Math.sin(angle) * handRadius);
+        canvas.height / 2 + Math.sin(angle) * handRadius);
     context.stroke();
 }
 
 function drawHands() {
-        sec = i;
+    sec = i;
     sec = sec > timeDifficulty ? sec - timeDifficulty : sec;
     drawHand(sec, false, 4);
 }
@@ -68,7 +68,7 @@ function start() {
     timer(), loop = setInterval(drawClock, 500);
 }
 
-difficulty = 2;
+difficulty = 1;
 switch (difficulty) {
     case 1:
         timeDifficulty = 60;
@@ -80,6 +80,8 @@ switch (difficulty) {
         timeDifficulty = 10;
         break;
     default:
+        timeDifficulty = 666;
+        console.log("pourquoi tu exécute ce bloc");
 }
 let i = 0;
 let result = "fini";
