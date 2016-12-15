@@ -44,21 +44,21 @@ function drawHand(loc, isHour) {
 
     context.moveTo(canvas.width / 2, canvas.height / 2);
     context.lineTo(canvas.width / 2 + Math.cos(angle) * handRadius,
-        canvas.height / 2 + Math.sin(angle) * handRadius);
+    canvas.height / 2 + Math.sin(angle) * handRadius);
     context.stroke();
 }
 
 function drawHands() {
     var date = new Date,
-        sec = date.getHours();
+        sec = i;
     sec = sec > 30 ? sec - 30 : sec;
-    drawHand(sec * 7 + (date.getSeconds() * 2), false, 4);
+    drawHand(sec * 7 + (1 * 2), false, 4);
 }
 
 function drawClock() {
     context.clearRect(0, 0, canvas.width, canvas.height);
 
-
+    console.log("i à cet instant vaux en dehors de la fonction timer:",i);
     drawCircle();
     drawCenter();
     drawHands();
@@ -68,36 +68,34 @@ function drawClock() {
 context.font = FONT_HEIGHT + 'px Arial';
 
 function start() {
-    timer();
-    loop = setInterval(drawClock, 1000);
+    timer(), loop = setInterval(drawClock, 500);
 }
 
-difficulty = 3;
+difficulty = 2;
 switch (difficulty) {
-  case 1:
-timeDifficulty = 60;
-    break;
-    case 2:
-timeDifficulty = 30;
-      break;
-      case 3:
-timeDifficulty = 10;
+    case 1:
+        timeDifficulty = 60;
         break;
-  default:
-
+    case 2:
+        timeDifficulty = 30;
+        break;
+    case 3:
+        timeDifficulty = 10;
+        break;
+    default:
 }
-let i=0;
+let i = 0;
 let result = "fini";
-function timer(){
-  i++;
-  if (i >=timeDifficulty) {
-    console.log(i);
-    i =0;
-    return console.log(result), result;
-  }
-  else {
-    console.log(i);
-    setTimeout(timer,1000);
-  }
+
+function timer() {
+    i++;
+    if (i >= timeDifficulty) {
+        console.log(i);
+        i = 0;
+        return console.log(result), result;
+    } else {
+        console.log(i);
+        setTimeout(timer, 1000);
+    }
 
 }
