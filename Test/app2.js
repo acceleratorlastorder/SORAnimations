@@ -3,22 +3,23 @@ var board = document.getElementById('canvas'),
     glasspane = document.getElementById('glasspane'),
     context = board.getContext('2d'),
     paused = true,
-/*  elem = board,*/
-    elemLeft = board.offsetLeft,
-    elemTop = board.offsetTop,
-    elements = []
-   circles_target = elements
-    /*,
+    elem = board,
+    elemLeft = elem.offsetLeft,
+    elemTop = elem.offsetTop,
+    elements = [],
     circles_target = [],
-    circles_ennemies = []*/;
+    circles_ennemies = [];
 
 context.lineWidth = 0.5;
 context.font = '32pt Ariel';
 
+// Add element.
+elements.push({
 
+});
 
 // Add event listener for `click` events.
-board.addEventListener('click', function(event) {
+elem.addEventListener('click', function(event) {
     var x = event.pageX - elemLeft,
         y = event.pageY - elemTop;
     console.log(x, y);
@@ -34,25 +35,9 @@ elements.forEach(function(element) {
     context.fillStyle = element.colour;
     context.fillRect(element.left, element.top, element.width, element.height);
 });
-// Add element.
-elements.push(
- {
-    x: 100,
-    y: 100,
-    velocityX: 8 * Math.random(),
-    velocityY: 6 * Math.random(),
-    radius: 20,
-    color: 'rgba(0, 255, 255, 0.9)'
-  }
-
-
-);
-
-
-/*
 
 for (let i = 0; i < 8; ++i) {
-    circles_target[0] = {
+    circles_target[i] = {
         x: 100,
         y: 100,
         velocityX: 8 * Math.random(),
@@ -60,8 +45,8 @@ for (let i = 0; i < 8; ++i) {
         radius: 20,
         color: 'rgba(0, 255, 255, 0.9)'
     };
-}   */
-/*
+}
+
 for (let i = 0; i < 50; ++i) {
     circles_ennemies[i] = {
         x: 100,
@@ -72,7 +57,7 @@ for (let i = 0; i < 50; ++i) {
         color: 'rgba(255, 0, 0, 1)'
     };
 }
-*/
+
 
 startButton.onclick = function(e) {
     e.preventDefault();
@@ -100,16 +85,16 @@ setInterval(function() {
             context.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 3, false);
             context.fillStyle = circle.color;
             context.fill();
-          /*  adjustPosition(circle);*/
+            adjustPosition(circle);
         });
-/*
+
         circles_ennemies.forEach(function(circle) {
             context.beginPath();
             context.arc(circle.x, circle.y, circle.radius, 0, Math.PI * 2, false);
             context.fillStyle = circle.color;
             context.fill();
             adjustPosition(circle);
-        });*/
+        });
     }
 }, 1500 / 60);
 
