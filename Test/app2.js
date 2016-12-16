@@ -15,12 +15,7 @@ context.font = '32pt Ariel';
 
 // Add element.
 elements.push({
-    startButton.onclick = function(e) {
-        e.preventDefault();
-        e.stopPropagation();
-        paused = !paused;
-        startButton.innerText = paused ? 'Start' : 'Stop';
-    };
+
 });
 
 // Add event listener for `click` events.
@@ -64,7 +59,12 @@ for (let i = 0; i < 50; ++i) {
 }
 
 
-
+startButton.onclick = function(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    paused = !paused;
+    startButton.innerText = paused ? 'Start' : 'Stop';
+};
 glasspane.onmousedown = function(e) {
     e.preventDefault();
     e.stopPropagation();
