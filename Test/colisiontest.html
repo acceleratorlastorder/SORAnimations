@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-
 <html>
-   <head>
-     <meta  charset="utf-8">
-      <title>Kill The Balls</title>
 
-      <style>
-         body {
+<head>
+    <meta charset="utf-8">
+    <title>Kill The Balls</title>
+
+    <style>
+        body {
             background: #dddddd;
-         }
+        }
 
-         #canvas {
+        #canvas {
             margin: 0 auto;
             background: #ffffff;
             border: thin solid #aaaaaa;
             cursor: url(cible.png), pointer;
-         }
+        }
 
-         #glasspane {
+        #glasspane {
             position: absolute;
             left: 50px;
             top: 50px;
@@ -28,51 +28,52 @@
             font-family: Droid Sans, Arial, Helvetica, sans-serif;
             font-size: 12px;
             cursor: pointer;
-            box-shadow: rgba(0,0,0,0.5) 5px 5px 20px;
-         }
+            box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;
+        }
 
-         #glasspane h2 {
+        #glasspane h2 {
             font-weight: normal;
-         }
+        }
 
-         #glasspane .title {
+        #glasspane .title {
             font-size: 2em;
             color: rgba(255, 255, 0, 0.8);
-         }
+        }
 
-         #glasspane a:hover {
+        #glasspane a:hover {
             color: yellow;
-         }
+        }
 
-         #glasspane a {
+        #glasspane a {
             text-decoration: none;
             color: #cccccc;
             font-size: 3.5em;
-         }
+        }
 
-         #glasspane p {
+        #glasspane p {
             margin: 10px;
             color: rgba(65, 65, 220, 1.0);
             font-size: 12pt;
             font-family: Palatino, Arial, Helvetica, sans-serif;
-         }
-      </style>
-   </head>
+        }
+    </style>
+</head>
 
-   <body>
-      <div id='glasspane'>
-         <h2 class='title'>Kill the Balls</h2>
+<body>
+    <div id='glasspane'>
+        <h2 class='title'>Kill the Balls</h2>
 
-         <p>Kill the blue balls</p>
+        <p>Kill the blue balls</p>
 
-         <a id='startButton'>Start</a>
-      </div>
-      <canvas id='myCanvas' width='400' height='200'>
+        <a id='startButton'>Start</a>
+    </div>
+    <canvas id='myCanvas' width='400' height='200'>
          Canvas not supported
       </canvas>
-      <canvas id='canvas' width='1300' height='650'>
+    <canvas id='canvas' width='1300' height='650'>
          Canvas not supported
       </canvas>
-     <script src='app2.js'></script>
-  </body>
+    <script src='app2.js'></script>
+</body>
+
 </html>
