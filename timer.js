@@ -92,9 +92,9 @@ function timer() {
         console.log(time);
         time = 0;
         return console.log(result), result;
-    } else {
+    }
+    else {
         console.log(time);
         setTimeout(timer, 1000);
     }
-
 }
