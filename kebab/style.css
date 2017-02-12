@@ -276,7 +276,6 @@ footer p {
     padding: 10px;
     font-size: 18px;
 }
-
 @media (max-width: 1120px), (orientation:portrait) {
     header {
         width: 99%;
