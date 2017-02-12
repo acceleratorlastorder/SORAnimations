@@ -1,25 +1,30 @@
 $(document).ready(function() {
-    let score = 0;
     $('#startButton').click(function() {
         mobgenerator();
         $("#glasspane").fadeTo("slow", 0, function() {
             $(this).remove();
         });
-
-        $('#canvas div:nth-child(2)').on('click', 'span', function() {
-            $(this).remove();
-            randomrespawn(0);
-        });
-        $('#canvas div:first').on('click', 'span', function() {
-            $(this).remove();
-            randomrespawn(1);
-        });
-
+        clickevent();
     });
 });
+clickevent = function() {
+
+    $('#canvas div:nth-child(2)').on('click', 'span', function() {
+        $(this).remove();
+        randomrespawn(0);
+    });
+    $('#canvas div:first').on('click', 'span', function() {
+        $(this).remove();
+        randomrespawn(1);
+        score -= 1;
+    });
+}
+
+let score = 0;
+var gamemode = 20;
 
 mobgenerator = function() {
-    for (var i = 0; i < 10; i++) {
+    for (var i = 0; i < gamemode; i++) {
         $('#canvas div:nth-child(2)').append('<span></span>');
         $('#canvas div:first').append('<span></span>');
     }
