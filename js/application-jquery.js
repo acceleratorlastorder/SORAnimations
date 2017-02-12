@@ -10,10 +10,12 @@ $(document).ready(function() {
 clickevent = function() {
 
     $('#canvas div:nth-child(2)').on('click', 'span', function() {
+      console.log("goodLeaves touched");
         $(this).remove();
         randomrespawn(0);
     });
     $('#canvas div:first').on('click', 'span', function() {
+      console.log("fallingLeaves touched");
         $(this).remove();
         randomrespawn(1);
         score -= 1;
