@@ -37,6 +37,9 @@ header {
   justify-content: center;
   padding: 20px;
 }
+header img{
+  max-width: 100%;
+}
 
 .title {
   width: 600px;
@@ -266,6 +269,28 @@ footer p{
   margin: 0;
   padding: 5px;
   font-size: 18px;
+}
+@media (max-width: 800px){
+  .state2 {
+    flex-direction: column;
+  }
+  .state2 *{
+    max-width: 100%;
+  }
+  .text-video, .video {
+    width: 100%;
+    padding: 0px;
+  }
+  .audio {
+    max-width: 100%;
+    width: 95%;
+    margin: auto;
+    border: 1px solid red;
+  }
+  .audio *{
+    max-width: 100%;
+    width: 100%;
+  }
 }
 
 @font-face {
