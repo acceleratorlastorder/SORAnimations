@@ -40,6 +40,7 @@ header {
 }
 
 #canvas {
+    position: relative;
     background-image: url(images/bg-kebab1.jpg);
     cursor: url(images/chef.png), pointer;
     border-radius: 4px;
@@ -52,11 +53,13 @@ header {
 }
 
 #glasspane {
+    max-width: 100%;
     position: absolute;
-    left: 20px;
-    top: 10px;
-    padding: 0px 20px 10px 10px;
-    background: rgba(0, 0, 0, 0.3);
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
     border: thin solid rgba(0, 0, 0, 0.6);
     color: red;
     font-family: fantasy, Arial, Helvetica, sans-serif;
@@ -71,19 +74,22 @@ header {
 
 #glasspane a {
     text-decoration: none;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
     color: rgba(255, 255, 255, 1);
-    font-size: 50px;
+    font-size: 80px;
     font-family: 'burrito';
 }
 
 #glasspane p {
     margin: 10px;
     color: white;
-    font-size: 22px;
+    font-size: 30px;
     font-family: 'typewriter', Arial, Helvetica, sans-serif;
     text-align: center;
 }
-
 
 @-webkit-keyframes fallingLeaves {
     0% {
@@ -271,6 +277,47 @@ footer p {
     font-size: 18px;
 }
 
+@media (max-width: 1120px), (orientation:portrait) {
+    header {
+        width: 99%;
+        height: 100px;
+        padding: 0px;
+    }
+
+    .title {
+        font-size: 45px;
+    }
+
+    .audio {
+        max-width: 100%;
+        width: 96%;
+        margin: auto;
+    }
+    .audio * {
+        max-width: 100%;
+        width: 100%;
+    }
+    .wrapper {
+        flex-direction: column;
+        max-width: 98%;
+        width: 100%;
+        position: relative;
+        padding: 0px;
+        margin: 0;
+        background: rgba(0, 0, 0, 0.5), linear-gradient(to left, #6190E8, #A7BFE8);
+    }
+    .wrapper * {
+        max-width: 100%;
+    }
+    #canvas {
+        background-size: cover;
+        width: 100%;
+        height: 600px;
+        overflow: hidden;
+        margin: auto;
+        padding: 2px;
+    }
+}
 
 @font-face {
     font-family: "typewriter";
