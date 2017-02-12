@@ -37,18 +37,18 @@ randomrespawn = function(x) {
     if (x == 1) {
         if (random < 0.25) {
             $('#canvas div:nth-child(2)').append('<span></span>');
-            console.log("blond created");
+            console.log("goodLeaves created");
         } else {
             $('#canvas div:first').append('<span></span>');
-            console.log("shark created");
+            console.log("fallingLeaves created");
         }
     } else if (x == 0) {
         if (random < 0.25) {
             $('#canvas div:first').append('<span></span>');
-            console.log("shark created");
+            console.log("fallingLeaves created");
         } else {
             $('#canvas div:nth-child(2)').append('<span></span>');
-            console.log("blond created");
+            console.log("goodLeaves created");
         }
     } else {
         console.log("unexpected value, please just play the game instead of trying weird things on it :)");
