@@ -48,7 +48,7 @@ header img {
 }
 
 #canvas {
-  position: relative;
+    position: relative;
     background-image: url(images/bg-ocean.jpg);
     cursor: url(images/float.png), pointer;
     border-radius: 4px;
@@ -61,7 +61,7 @@ header img {
 }
 
 #glasspane {
-  max-width: 100%;
+    max-width: 100%;
     position: absolute;
     left: 0px;
     top: 0px;
@@ -74,6 +74,7 @@ header img {
     font-size: 5px;
     cursor: pointer;
     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 0px;
+    animation-duration: 3s;
 }
 
 #glasspane a:hover {
@@ -143,7 +144,14 @@ header img {
     -webkit-animation-delay: 8s;
     -moz-animation-delay: 8s;
 }
-
+@keyframes glasspaneanimation {
+0%{
+  opacity: 50%;
+}
+100%{
+  opacity: 90%;
+}
+}
 @-webkit-keyframes fallingLeaves {
     0% {
         opacity: 1;
