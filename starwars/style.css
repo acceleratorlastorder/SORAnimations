@@ -1,0 +1,281 @@
+body {
+    margin: 0;
+    background-image: url("images/bg-starwars.jpg");
+    background-size: contain;
+}
+
+.audio {
+    width: 300px;
+    margin: 0 auto;
+    border: 3px solid rgba(255, 204, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 30px;
+    background: rgba(0, 0, 0, 0.5), linear-gradient(to left, #6190E8, #A7BFE8);
+}
+
+header {
+    width: 80%;
+    background: rgba(0, 0, 0, 0.1);
+    border: thin solid rgba(0, 0, 0, 0.6);
+    box-shadow: rgba(0, 0, 240, 0.3) 5px 5px 20px;
+    margin: 0 auto;
+}
+
+.title {
+    text-align: center;
+    font-family: 'starwars';
+    color: rgba(255, 204, 0, 1);
+    font-size: 120px;
+    padding: 20px;
+}
+
+#canvas {
+    background-image: url(images/bg-canvas.jpg);
+    cursor: url(images/lightsaber.png), pointer;
+    border-radius: 4px;
+    width: 1250px;
+    height: 720px;
+    overflow: hidden;
+    padding: 30px;
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px 20px;
+    border: thin solid rgba(0, 0, 0, 0.3);
+}
+
+#glasspane {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    padding: 0px 20px 10px 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border: thin solid rgba(0, 0, 0, 0.6);
+    color: red;
+    font-family: fantasy, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: rgba(240, 0, 0, 0.3) 5px 5px 20px;
+}
+
+#glasspane a:hover {
+    color: red;
+}
+
+#glasspane a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 50px;
+    font-family: 'starwars2';
+}
+
+#glasspane p {
+    margin: 10px;
+    color: white;
+    font-size: 22px;
+    font-family: 'typewriter', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.fallingLeaves {
+    text-align: center;
+}
+
+.fallingLeaves span {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: -280px 40px 54px -34px;
+    background: url("images/darth-vader.png");
+    -webkit-animation: fallingLeaves 3.5s infinite linear;
+    -moz-animation: fallingLeaves 3.5s infinite linear;
+}
+
+.fallingLeaves span:nth-child(5n+5) {
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+
+.fallingLeaves span:nth-child(3n+2) {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+
+.fallingLeaves span:nth-child(2n+5) {
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.fallingLeaves span:nth-child(3n+10) {
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+
+.fallingLeaves span:nth-child(7n+2) {
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+
+.fallingLeaves span:nth-child(4n+5) {
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+}
+
+.fallingLeaves span:nth-child(3n+7) {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+}
+
+@-webkit-keyframes fallingLeaves {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0px) rotateZ(0deg);
+    }
+    75% {
+        opacity: 1;
+        -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+    }
+}
+
+@-moz-keyframes fallingLeaves {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0px) rotateZ(0deg);
+    }
+    75% {
+        opacity: 1;
+        -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+    }
+}
+
+.goodLeaves {
+    text-align: center;
+}
+
+.goodLeaves span {
+    display: inline-block;
+    width: 68px;
+    height: 80px;
+    margin: -280px 40px 54px -34px;
+    background: url("images/leia.png");
+    -webkit-animation: fallingLeaves 5s infinite linear;
+    -moz-animation: fallingLeaves 5s infinite linear;
+}
+
+.goodLeaves span:nth-child(7n+5) {
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+
+.goodLeaves span:nth-child(8n+2) {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+
+.goodLeaves span:nth-child(2n+5) {
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.goodLeaves span:nth-child(5n+10) {
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+
+.goodLeaves span:nth-child(7n+2) {
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+
+.goodLeaves span:nth-child(4n+5) {
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+}
+
+.goodLeaves span:nth-child(3n+7) {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+}
+
+.state2 {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: space-between;
+    align-items: center;
+    cursor: url(images/lightsaber.png), pointer;
+}
+
+.text-video {
+    width: 35%;
+    padding: 50px;
+    color: white;
+    text-align: center;
+}
+
+.video {
+    width: 65%;
+    height: auto;
+    padding: 50px;
+    text-align: right;
+}
+
+.synopsis-title {
+    font-size: 40px;
+    font-family: 'miami';
+}
+
+.synopsis-text {
+    font-size: 20px;
+    font-family: 'atwriter';
+}
+
+footer p {
+    background-color: rgba(255, 204, 0, 0.5);
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    font-size: 18px;
+}
+
+@font-face {
+    font-family: "miami";
+    src: url("fonts/Miami.ttf");
+}
+
+@font-face {
+    font-family: "typewriter";
+    src: url("fonts/typewriter.ttf");
+}
+
+@font-face {
+    font-family: "atwriter";
+    src: url("fonts/atwriter.ttf");
+}
+
+@font-face {
+    font-family: "starwars";
+    src: url("fonts/Starjedi.ttf");
+}
+
+@font-face {
+    font-family: "starwars2";
+    src: url("fonts/starwars2.ttf");
+}

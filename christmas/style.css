@@ -1,0 +1,218 @@
+body {
+    background-image: url(images/bg-snow.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+
+.audio {
+    width: 300px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+header {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title {
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    margin: 0 auto;
+    border-bottom: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: rgba(255, 255, 255, 0.5) 5px 5px 20px;
+    font-size: 90px;
+    text-align: center;
+    font-family: 'gingerbread';
+}
+
+#canvas {
+    background-image: url(images/bg-christmas.jpeg);
+    border: 3px solid rgba(255, 255, 255, 0.9);
+    box-shadow: rgba(255, 255, 255, 0.75) 5px 5px 20px;
+    cursor: url(images/elf.png), pointer;
+    border-radius: 4px;
+    width: 1250px;
+    height: 720px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+#glasspane {
+    position: absolute;
+    left: 20px;
+    top: 10px;
+    padding: 0px 20px 10px 10px;
+    background: rgba(255, 255, 255, 0.3);
+    border: thin dashed rgba(255, 255, 255, 0.6);
+    color: #eeeeee;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;
+}
+
+#glasspane a:hover {
+    color: red;
+}
+
+#glasspane a {
+    text-decoration: none;
+    color: #990000;
+    font-size: 65px;
+    text-align: center;
+    font-family: 'christmas';
+}
+
+#glasspane p {
+    margin: 10px;
+    color: #990000;
+    font-size: 40px;
+    font-family: 'gingerbread', Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+.fallingLeaves {
+    text-align: center;
+}
+
+.fallingLeaves span {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    margin: -280px 40px 54px -34px;
+    background: url("images/grinch.png");
+    -webkit-animation: fallingLeaves 3.5s infinite linear;
+    -moz-animation: fallingLeaves 3.5s infinite linear;
+}
+
+.fallingLeaves span:nth-child(5n+5) {
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+
+.fallingLeaves span:nth-child(3n+2) {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+
+.fallingLeaves span:nth-child(2n+5) {
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.fallingLeaves span:nth-child(3n+10) {
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+
+.fallingLeaves span:nth-child(7n+2) {
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+
+.fallingLeaves span:nth-child(4n+5) {
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+}
+
+.fallingLeaves span:nth-child(3n+7) {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+}
+
+@-webkit-keyframes fallingLeaves {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0px) rotateZ(0deg);
+    }
+    75% {
+        opacity: 1;
+        -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+    }
+}
+
+@-moz-keyframes fallingLeaves {
+    0% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0px) rotateZ(0deg);
+    }
+    75% {
+        opacity: 1;
+        -webkit-transform: translate(100px, 600px) rotateZ(270deg);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(150px, 800px) rotateZ(360deg);
+    }
+}
+
+.goodLeaves {
+    text-align: center;
+}
+
+.goodLeaves span {
+    display: inline-block;
+    width: 58px;
+    height: 60px;
+    margin: -280px 40px 54px -34px;
+    background: url("images/gift.png");
+    -webkit-animation: fallingLeaves 5s infinite linear;
+    -moz-animation: fallingLeaves 5s infinite linear;
+}
+
+.goodLeaves span:nth-child(7n+5) {
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+
+.goodLeaves span:nth-child(8n+2) {
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+
+.goodLeaves span:nth-child(2n+5) {
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.goodLeaves span:nth-child(5n+10) {
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+
+.goodLeaves span:nth-child(7n+2) {
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+
+.goodLeaves span:nth-child(4n+5) {
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+}
+
+.goodLeaves span:nth-child(3n+7) {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+}
+
+@font-face {
+    font-family: "gingerbread";
+    src: url("Gingerbread House.ttf");
+}
+
+@font-face {
+    font-family: "christmas";
+    src: url("VeryChristmess.ttf");
+}

@@ -1,0 +1,210 @@
+body {
+    background: black;
+    margin: 0;
+}
+
+.audio {
+  width: 300px;
+  margin: 0 auto;
+  background-color: black;
+}
+
+.wrapper {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.title {
+    color: #FE9600;
+    margin: 0 auto;
+    border: 2px dashed #03001C;
+    font-size: 90px;
+    text-align: center;
+    font-family: 'halloween';
+}
+
+#canvas {
+    background-image: url(images/bg-halloween.png);
+    border: thin solid black;
+    cursor: url(images/baguette.png), pointer;
+    border-radius: 6px;
+    width: 1050px;
+    height: 720px;
+    overflow: hidden;
+}
+
+#glasspane {
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    padding: 0px 20px 10px 10px;
+    background: rgba(0, 0, 0, 0.3);
+    border: thin solid rgba(0, 0, 0, 0.6);
+    color: #eeeeee;
+    font-family: fantasy, Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 20px;
+}
+
+#glasspane a:hover {
+    color: red;
+}
+
+#glasspane a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 1);
+    font-size: 30px;
+    text-align: center;
+}
+
+#glasspane p {
+    margin: 10px;
+    color: #FE9600;
+    font-size: 20px;
+    font-family: fantasy, Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+
+.fallingLeaves {
+    text-align: center;
+}
+.fallingLeaves span {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+	  margin: -280px 40px 54px  -34px;
+	  background:url("images/witch.png");
+
+    -webkit-animation: fallingLeaves 3.5s infinite  linear;
+    -moz-animation: fallingLeaves 3.5s infinite  linear;
+}
+.fallingLeaves span:nth-child(5n+5) {
+
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+.fallingLeaves span:nth-child(3n+2) {
+
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+.fallingLeaves span:nth-child(2n+5) {
+
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.fallingLeaves span:nth-child(3n+10) {
+
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+.fallingLeaves span:nth-child(7n+2) {
+
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+.fallingLeaves span:nth-child(4n+5) {
+
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+}
+.fallingLeaves span:nth-child(3n+7) {
+
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+}
+@-webkit-keyframes fallingLeaves {
+  0% {
+    opacity: 1;
+
+	-webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    opacity: 1;
+
+	-webkit-transform: translate(100px, 600px) rotateZ(270deg);
+  }
+  100% {
+    opacity: 0;
+
+	-webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+@-moz-keyframes fallingLeaves {
+  0% {
+    opacity: 1;
+
+	-webkit-transform: translate(0, 0px) rotateZ(0deg);
+  }
+  75% {
+    opacity: 1;
+
+	-webkit-transform: translate(100px, 600px) rotateZ(270deg);
+  }
+  100% {
+    opacity: 0;
+
+	-webkit-transform: translate(150px, 800px) rotateZ(360deg);
+  }
+}
+
+.goodLeaves {
+    text-align: center;
+}
+.goodLeaves span {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+	  margin: -280px 40px 54px -34px;
+	  background:url("images/pumpkin.png");
+
+    -webkit-animation: fallingLeaves 5s infinite  linear;
+    -moz-animation: fallingLeaves 5s infinite  linear;
+}
+.goodLeaves span:nth-child(7n+5) {
+
+    -webkit-animation-delay: 1.3s;
+    -moz-animation-delay: 1.3s;
+}
+.goodLeaves span:nth-child(8n+2) {
+
+    -webkit-animation-delay: 1.5s;
+    -moz-animation-delay: 1.5s;
+}
+.goodLeaves span:nth-child(2n+5) {
+
+    -webkit-animation-delay: 1.7s;
+    -moz-animation-delay: 1.7s;
+}
+
+.goodLeaves span:nth-child(5n+10) {
+
+    -webkit-animation-delay: 2.7s;
+    -moz-animation-delay: 2.7s;
+}
+.goodLeaves span:nth-child(7n+2) {
+
+    -webkit-animation-delay: 3.5s;
+    -moz-animation-delay: 3.5s;
+}
+.goodLeaves span:nth-child(4n+5) {
+
+    -webkit-animation-delay: 5.5s;
+    -moz-animation-delay: 5.5s;
+}
+.goodLeaves span:nth-child(3n+7) {
+
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+}
+
+@font-face {
+  font-family: "halloween";
+  src: url("HalloweenParty.ttf");
+}
