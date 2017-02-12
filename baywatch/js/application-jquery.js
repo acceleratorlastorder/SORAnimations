@@ -2,6 +2,8 @@ $(document).ready(function() {
 let score = 0;
     $('#startButton').click(function() {
         mobgenerator();
+            $("#glasspane").remove();
+
 
         $('#canvas div:nth-child(2)').on('click', 'span', function() {
             $(this).remove();
