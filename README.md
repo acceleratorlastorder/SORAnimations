@@ -2,6 +2,6 @@
 
 Website of the project:
 
-https://darkilen.github.io/SORAnimations/
+https://acceleratorlastorder.github.io/SORAnimations/
 
 Enjoy.
